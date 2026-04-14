@@ -1,0 +1,48 @@
+.container { position: relative; }
+
+.inputWrap {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(0,0,0,0.5); border: 1px solid var(--border);
+  border-radius: 20px; padding: 6px 14px;
+  transition: border-color var(--transition), background var(--transition);
+}
+.inputWrap:focus-within { border-color: var(--text); background: rgba(0,0,0,0.8); }
+
+.icon { font-size: 0.85rem; }
+
+.input {
+  background: none; border: none; outline: none;
+  color: var(--text); font-size: 0.85rem; width: 200px;
+}
+.input::placeholder { color: var(--text-muted); }
+.input::-webkit-search-cancel-button { display: none; }
+
+.spinner {
+  width: 14px; height: 14px; border: 2px solid var(--border);
+  border-top-color: var(--accent); border-radius: 50%;
+  animation: spin 0.6s linear infinite; flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.dropdown {
+  position: absolute; top: calc(100% + 8px); left: 0; right: 0;
+  background: #1a1a1a; border: 1px solid var(--border);
+  border-radius: 8px; list-style: none; overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  animation: slideDown 0.2s ease;
+  z-index: 200; min-width: 320px;
+}
+
+.item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; cursor: pointer;
+  transition: background var(--transition);
+}
+.item:hover, .item:focus { background: rgba(255,255,255,0.08); outline: none; }
+
+.thumb { width: 48px; height: 28px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
+.thumbPlaceholder { width: 48px; height: 28px; background: var(--border); border-radius: 3px; flex-shrink: 0; }
+
+.info { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
+.title { font-size: 0.85rem; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.meta { font-size: 0.75rem; color: var(--text-muted); }

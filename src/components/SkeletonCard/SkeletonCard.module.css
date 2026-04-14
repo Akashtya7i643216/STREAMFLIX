@@ -1,0 +1,25 @@
+.shimmer {
+  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+  background-size: 400px 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.card { width: var(--card-w); flex-shrink: 0; }
+
+.poster {
+  composes: shimmer;
+  width: 100%; height: var(--card-h);
+  border-radius: var(--radius);
+}
+
+.line {
+  composes: shimmer;
+  height: 10px; border-radius: 4px;
+  margin-top: 8px; width: 80%;
+}
+
+.lineShort {
+  composes: shimmer;
+  height: 8px; border-radius: 4px;
+  margin-top: 6px; width: 50%;
+}

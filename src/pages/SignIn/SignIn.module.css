@@ -1,0 +1,83 @@
+.page {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  position: relative; padding: 20px;
+}
+
+.bg {
+  position: absolute; inset: 0;
+  background: url('https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IN-en-20231016-popsignuptwoweeks-perspective_alpha_website_large.jpg') center/cover no-repeat;
+  filter: brightness(0.35);
+}
+
+.card {
+  position: relative; z-index: 1;
+  background: rgba(0,0,0,0.75);
+  border-radius: 8px; padding: 48px 40px;
+  width: 100%; max-width: 440px;
+  animation: fadeIn 0.4s ease;
+}
+
+.logo {
+  font-size: 1.8rem; font-weight: 900; letter-spacing: 2px;
+  color: #fff; margin-bottom: 28px; text-align: center;
+}
+.logo span { color: var(--accent); }
+
+.heading { font-size: 1.6rem; font-weight: 700; margin-bottom: 24px; }
+
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+
+.label { font-size: 0.85rem; color: var(--text-muted); }
+
+.input {
+  padding: 14px 16px; border-radius: 4px;
+  background: #333; border: 1px solid transparent;
+  color: var(--text); font-size: 1rem;
+  transition: border-color var(--transition);
+  outline: none;
+}
+.input:focus { border-color: var(--text); }
+.inputError { border-color: var(--accent) !important; }
+
+.error { font-size: 0.78rem; color: #e87c7c; }
+
+.submitBtn {
+  margin-top: 8px; padding: 14px;
+  background: var(--accent); color: #fff;
+  font-size: 1rem; font-weight: 700; border-radius: 4px;
+  transition: background var(--transition), transform var(--transition);
+  display: flex; align-items: center; justify-content: center; min-height: 48px;
+}
+.submitBtn:hover:not(:disabled) { background: var(--accent-hover); transform: scale(1.01); }
+.submitBtn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.spinner {
+  width: 20px; height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff; border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.divider {
+  display: flex; align-items: center; gap: 12px;
+  margin: 20px 0; color: var(--text-muted); font-size: 0.85rem;
+}
+.divider::before, .divider::after {
+  content: ''; flex: 1; height: 1px; background: var(--border);
+}
+
+.guestBtn {
+  width: 100%; padding: 12px;
+  background: transparent; color: var(--text);
+  border: 1px solid var(--border); border-radius: 4px;
+  font-size: 0.95rem; transition: all var(--transition);
+}
+.guestBtn:hover { border-color: var(--text); background: rgba(255,255,255,0.05); }
+
+.note {
+  margin-top: 20px; font-size: 0.75rem;
+  color: var(--text-muted); text-align: center; line-height: 1.5;
+}

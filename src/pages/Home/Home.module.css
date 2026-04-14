@@ -1,0 +1,7 @@
+.main { padding-top: 0; }
+
+.rows {
+  padding: 0 0 60px;
+  margin-top: -80px;
+  position: relative; z-index: 1;
+}

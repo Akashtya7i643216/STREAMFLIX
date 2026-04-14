@@ -1,0 +1,8 @@
+.bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+  padding: 10px 16px; text-align: center;
+  font-size: 0.85rem; font-weight: 600;
+  animation: slideDown 0.3s ease;
+}
+.offline { background: #b81c1c; color: #fff; }
+.online { background: #1a7a1a; color: #fff; }

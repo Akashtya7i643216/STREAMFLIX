@@ -1,0 +1,32 @@
+.section { margin-bottom: 32px; }
+
+.heading {
+  font-size: 1.1rem; font-weight: 700;
+  margin-bottom: 12px; padding: 0 4%;
+  color: var(--text);
+}
+
+.wrapper { position: relative; }
+
+.row {
+  display: flex; gap: 8px;
+  overflow-x: auto; overflow-y: visible;
+  padding: 8px 4% 16px;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; scrollbar-width: none;
+}
+.row::-webkit-scrollbar { display: none; }
+.row > * { scroll-snap-align: start; }
+
+.arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  z-index: 5; width: 40px; height: 80px;
+  background: rgba(0,0,0,0.6); color: #fff;
+  font-size: 2rem; display: flex; align-items: center; justify-content: center;
+  border-radius: 4px; transition: background var(--transition), opacity var(--transition);
+  opacity: 0;
+}
+.wrapper:hover .arrow { opacity: 1; }
+.arrow:hover { background: rgba(0,0,0,0.9); }
+.left { left: 0; border-radius: 0 4px 4px 0; }
+.right { right: 0; border-radius: 4px 0 0 4px; }

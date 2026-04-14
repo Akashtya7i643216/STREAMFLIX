@@ -1,0 +1,18 @@
+.main { padding: 100px 4% 60px; min-height: 100vh; animation: fadeIn 0.3s ease; }
+
+.header { margin-bottom: 28px; }
+.title { font-size: 1.8rem; font-weight: 900; }
+.count { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-w), 1fr));
+  gap: 16px;
+}
+
+.sentinel { height: 40px; }
+
+.end {
+  text-align: center; color: var(--text-muted);
+  font-size: 0.85rem; padding: 24px;
+}
